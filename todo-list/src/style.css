@@ -1,0 +1,145 @@
+::after, ::before, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+    background-color: #79b9f9;
+    display: inline-block;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.all-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo-list {
+    width: 55%;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(238, 126, 126);
+}
+
+.list-header {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-el {
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: rgb(73, 231, 92);
+    border-radius: 10px;
+}
+
+.del {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    border-radius: 3px;
+}
+.del:hover {
+    cursor: pointer;
+}
+.del::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 3px;
+        rotate: -45deg;
+        display: block;
+        width: 18px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #fff;
+}
+.del::after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 3px;
+        rotate: 45deg;
+        display: block;
+        width: 18px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #fff;
+}
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 15px;
+    width: 35%;
+    height: fit-content;
+    background-color: #cc439e;
+    border-radius: 20px;
+}
+
+.inp-head {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+}
+.inp-head:focus-visible {
+    outline: #57013e 3px solid;
+}
+
+.inp-body {
+    max-width: 100%;
+    min-height: 80px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+.inp-body:focus-visible {
+    outline: #57013e 3px solid;
+}
+
+.subBut {
+    width: 100%;
+    height: 50px;
+    border: #57013e 3px solid;
+    border-radius: 15px;
+    align-items: center;
+    font-size: 25px;
+    background-color: #a7067a;
+}
+.subBut:active {
+    background-color: #57013e;
+}
+.subBut:hover {
+    cursor: pointer;
+}
