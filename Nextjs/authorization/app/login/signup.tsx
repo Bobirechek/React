@@ -51,7 +51,7 @@ export default function SignUpn() {
     return <div className="signup">
         <h1 className="header">Sign up</h1>
         <div className="inp-block">
-            <label>
+            <label className="login-label">
                 <p>email</p>
                 <input
                     className="sign-inp"
@@ -62,7 +62,7 @@ export default function SignUpn() {
                 {/* <input className="sign-inp" name="login" type="emil" /> */}
             </label>
             
-            <label>
+            <label className="login-label">
                 <p>password</p>
                 <input
                     className="sign-inp"

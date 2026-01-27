@@ -17,7 +17,9 @@ export default function LogIn() {
         email,
         password,
     })
-    .then(res => res?.error ? console.log(res.error) : redirect("/profile"));
+    .then(res => res?.error ? 
+        res?.status === 401 ? alert("Invalid password") : console.log(res?.error)
+        : redirect("/profile"));
     };
 
     
@@ -26,7 +28,7 @@ export default function LogIn() {
     return <div className="login">
         <h1 className="header">Log in</h1>
         <div className="inp-block">
-            <label>
+            <label className="login-label">
                 <p>email</p>
                 {/* <input className="log-inp" name="login" type="email" /> */}
                 <input
@@ -37,7 +39,7 @@ export default function LogIn() {
                 />
             </label>
             
-            <label>
+            <label className="login-label">
                 <p>password</p>
                 <input
                     className="log-inp"

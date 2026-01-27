@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
+import ProfilePage from "./profilePage"
 
 export default async function Profile() {
   const session = await getServerSession(authOptions);
@@ -10,10 +11,5 @@ export default async function Profile() {
     redirect("/login");
   }
 
-  return (
-    <div>
-      <h1>Profile page</h1>
-      <p>Welcome, {session.user?.email}</p>
-    </div>
-  );
+  return (< ProfilePage />);
 }
